@@ -1,0 +1,105 @@
+<!-- FILEPATH: /home/othmansalahi/Repositories/web-site/templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+        }
+
+        header {
+            grid-row: 1;
+        }
+
+        main {
+            grid-row: 2;
+        }
+
+        footer {
+            grid-row: 3;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-blue-500 shadow-md text-white text-center py-4">
+        <h1 class="text-4xl font-bold mb-4">Welcome to My Profile</h1>
+        <nav>
+            <ul class="flex justify-center space-x-4">
+                <li><a href="#" class="hover:text-gray-300 transition duration-200"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/about" class="hover:text-gray-300 transition duration-200"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#" class="hover:text-gray-300 transition duration-200"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="#" class="hover:text-gray-300 transition duration-200"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+    <marquee>
+        <span class="mr-4 text-black">just chilling</span>
+        <span class="mr-4">just chilling</span>
+        <span class="mr-4 text-black">just chilling</span>
+        <span class="mr-4">just chilling</span>
+        <span class="mr-4 text-black">just chilling</span>
+        <span class="mr-4">just chilling</span>
+        <span class="mr-4 text-black">just chilling</span>
+        <span class="mr-4">just chilling</span>
+        <span class="mr-4 text-black">just chilling</span>
+        <span class="mr-4">just chilling</span>
+        <span class="mr-4 text-black">just chilling</span>
+        <span class="mr-4">just chilling</span>
+    </marquee>
+    </header>
+    <button id="theme-button" class="fixed top-4 right-4 bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded transition duration-200">
+        <i class="fas fa-paint-brush mr-2"></i>
+    </button>
+    <main class="container mx-auto mt-8 p-6 rounded shadow-lg">
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-2">About Me</h2>
+            <p class="text-gray-700">I am a passionate web developer with experience in HTML, CSS, and JavaScript.</p>
+        </section>
+    
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-2">My Projects</h2>
+            <ul class="space-y-4">
+                <li class="p-4 rounded shadow">
+                    <h3 class="text-xl font-bold mb-2">Project 1</h3>
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </li>
+                <li class="p-4 rounded shadow">
+                    <h3 class="text-xl font-bold mb-2">Project 2</h3>
+                    <p class="text-gray-700">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </li>
+            </ul>
+        </section>
+    
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-2">Contact Me</h2>
+            <form class="mt-4">
+                <label for="name" class="block text-gray-700">Name:</label>
+                <input type="text" id="name" class="w-full py-2 px-4 border border-gray-300 rounded mt-2" required>
+    
+                <label for="email" class="block mt-4 text-gray-700">Email:</label>
+                <input type="email" id="email" class="w-full py-2 px-4 border border-gray-300 rounded mt-2" required>
+    
+                <label for="message" class="block mt-4 text-gray-700">Message:</label>
+                <textarea id="message" class="w-full py-2 px-4 border border-gray-300 rounded mt-2" required></textarea>
+    
+                <button type="submit" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded transition duration-200">Send Message</button>
+            </form>
+        </section>
+    </main>
+<footer class="bg-blue-500 text-white py-6 shadow-inner">
+    <div class="container mx-auto text-center">
+        <p class="mb-2">© 2022 My Profile. All rights reserved.</p>
+        <div class="flex justify-center space-x-4">
+            <a href="#" class="hover:text-gray-300 transition duration-200"><i class="fas fa-file-alt"></i> Terms of Service</a>
+            <a href="#" class="hover:text-gray-300 transition duration-200"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+        </div>
+    </div>
+</footer>
+<script src="/static/js/app.js"></script>
+</body>
+</html>

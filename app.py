@@ -2,6 +2,7 @@
 
 from flask import Flask, render_template
 import os
+from constants import EXIT_FAILURE
 
 app = Flask(__name__)
 HOST = '0.0.0.0'

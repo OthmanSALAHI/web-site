@@ -6,13 +6,15 @@ from constants import EXIT_FAILURE
 
 app = Flask(__name__)
 HOST = '0.0.0.0'
+PORT = 5000
 def check_env():
     if os.getenv("ENV_HOST"):
         HOST = getenv("ENV_HOST")
     else:
         print("wrong ENV or not defined")
         return (EXIT_FAILURE)
-
+    if os.getenv("ENV_PORT"):
+        PORT = getenv("ENV_PORT")
 @app.route('/')
 def index():
     return render_template('index.html')

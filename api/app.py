@@ -13,3 +13,6 @@ def states():
     if data:    
         return data
     print("error")
+
+if __name__ == "__main__":
+    app.run(debug=True)

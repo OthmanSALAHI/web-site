@@ -6,7 +6,7 @@ import json
 app = Flask(__name__)
 
 
-@app.route("/states", methods=["GET"])
+@app.route("/apis/states", methods=["GET"])
 def states():
     with open("file.json", "r") as f:
         data = json.load(f)

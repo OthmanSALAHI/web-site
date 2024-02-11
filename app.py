@@ -25,8 +25,9 @@ def index():
 def about():
     return render_template('about.html')
 
-# states = get("http://0.0.0.0:5000/apis/states").json()
-states = []
+states = get("http://0.0.0.0:5000/apis/states").json()
+
+
 @app.route('/states')
 def states_list(states=states):
     if not states:

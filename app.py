@@ -10,6 +10,7 @@ app = Flask(__name__)
 HOST = '0.0.0.0'
 PORT = 5000
 def check_env():
+    """function that do simple flask app"""
 
     HOST = getenv("ENV_HOST",'0.0.0.0')
     PORT = getenv("ENV_PORT", 5000)

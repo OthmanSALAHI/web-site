@@ -10,13 +10,9 @@ app = Flask(__name__)
 HOST = '0.0.0.0'
 PORT = 5000
 def check_env():
-    if getenv("ENV_HOST"):
-        HOST = getenv("ENV_HOST")
-    else:
-        print("wrong ENV or not defined")
-        return (EXIT_FAILURE)
-    if getenv("ENV_PORT"):
-        PORT = getenv("ENV_PORT")
+
+    HOST = getenv("ENV_HOST",'0.0.0.0')
+    PORT = getenv("ENV_PORT", 5000)
 @app.route('/')
 def index():
     return render_template('index.html')

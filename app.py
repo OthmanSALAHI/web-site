@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from flask import Flask, render_template
-from os 
+from os import getenv 
 import json
 from requests import get
 from constants import EXIT_FAILURE
@@ -25,8 +25,8 @@ def index():
 def about():
     return render_template('about.html')
 
-states = get("http://0.0.0.0:5000/apis/states").json()
-
+# states = get("http://0.0.0.0:5000/apis/states").json()
+states = []
 @app.route('/states')
 def states_list(states=states):
     if not states:
@@ -34,4 +34,4 @@ def states_list(states=states):
     return render_template("states.html", states=states)
 if __name__ == '__main__':
     check_env()
-    app.run(host=HOST, port=5000, debug=True)
+    app.run(host=HOST, port=PORT, debug=True)

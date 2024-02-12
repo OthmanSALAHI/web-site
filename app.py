@@ -4,7 +4,7 @@ from flask import Flask, render_template
 from os import getenv 
 import json
 from requests import get
-from constants import EXIT_FAILURE
+
 
 app = Flask(__name__)
 HOST = '0.0.0.0'
